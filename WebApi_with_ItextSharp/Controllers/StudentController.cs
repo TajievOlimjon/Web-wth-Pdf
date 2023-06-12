@@ -36,7 +36,7 @@ namespace WebApi.Controllers
             await _dbContext.Students.AddAsync(student);
             var result = await _dbContext.SaveChangesAsync();
             if (result == 0) return BadRequest("Data not added !");
-            return BadRequest("Data successfully added !");
+            return Ok("Data successfully added !");
         }
 
         // PUT api/<StudentController>/5
@@ -48,7 +48,7 @@ namespace WebApi.Controllers
             _dbContext.Students.Update(model);
             var result = await _dbContext.SaveChangesAsync();
             if (result == 0) return BadRequest("Data not updated !");
-            return BadRequest("Data successfully updated !");
+            return Ok("Data successfully updated !");
         }
 
         // DELETE api/<StudentController>/5
@@ -60,7 +60,7 @@ namespace WebApi.Controllers
             _dbContext.Students.Remove(student);
             var result = await _dbContext.SaveChangesAsync();
             if (result == 0) return BadRequest("Data not removed !");
-            return BadRequest("Data successfully removed !");
+            return Ok("Data successfully removed !");
         }
     }
 }
