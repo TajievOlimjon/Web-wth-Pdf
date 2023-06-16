@@ -20,7 +20,7 @@ internal class Program
 
                 page.Content().Element(Content);
 
-                page.Footer().AlignCenter().Text($" Душанбе {DateTime.Now.ToString("yyyy")}").Black();
+                page.Footer().AlignCenter().Text($" Душанбе {DateTime.Now.ToString("yyyy")}").FontFamily("Arial").Black();
             });
         });
         QuestPDF.Settings.License = LicenseType.Community;
@@ -83,7 +83,7 @@ internal class Program
 
 
                     table.Cell().Element(CellStyle).Text(i);
-                    table.Cell().Element(CellStyle).Text("Самсунг 8 A");
+                    table.Cell().Element(CellStyle).Text("Самсунг 8 A").FontFamily("Arial");
                     table.Cell().Element(CellStyle).Background(Colors.Blue.Lighten2).AlignCenter().Text(qty);
                     table.Cell().Element(CellStyle).AlignRight().Text(price);
                     table.Cell().Element(CellStyle).AlignRight().Text(total);
