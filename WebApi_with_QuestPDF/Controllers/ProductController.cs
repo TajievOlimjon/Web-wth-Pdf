@@ -27,6 +27,5 @@ namespace WebApi_with_QuestPDF.Controllers
 
             return Ok(product);
         }
-       
     }
 }
